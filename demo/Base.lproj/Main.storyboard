@@ -39,7 +39,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="第一个" id="syc-6m-wyI">
-                        <barButtonItem key="rightBarButtonItem" title="第二个" id="l7f-PN-DCP">
+                        <barButtonItem key="rightBarButtonItem" title="车牌键盘" id="l7f-PN-DCP">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="GJE-cf-btg"/>
                             </connections>
@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahu-2h-PrW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="系统键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahu-2h-PrW">
                                 <rect key="frame" x="87" y="84" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9w1-Pf-DZb"/>
@@ -72,21 +72,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApR-Qc-pk4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="车牌键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApR-Qc-pk4">
                                 <rect key="frame" x="88" y="139" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="NEL-yF-zCJ"/>
                                     <constraint firstAttribute="height" constant="35" id="Vz7-z5-hmI"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05x-oo-Mgy">
-                                <rect key="frame" x="88" y="191" width="200" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ZGG-59-yOv"/>
-                                    <constraint firstAttribute="height" constant="35" id="a96-ah-kAo"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -107,19 +97,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ApR-Qc-pk4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1jn-1Y-jhV"/>
-                            <constraint firstItem="05x-oo-Mgy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OeG-1i-LEn"/>
                             <constraint firstItem="ApR-Qc-pk4" firstAttribute="top" secondItem="Ahu-2h-PrW" secondAttribute="bottom" constant="20" id="Og3-Je-lRx"/>
                             <constraint firstItem="Ahu-2h-PrW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jXY-F3-2Fb"/>
                             <constraint firstAttribute="trailing" secondItem="zdB-GY-Jdi" secondAttribute="trailing" constant="10" id="kdn-3g-9JH"/>
                             <constraint firstItem="Ahu-2h-PrW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lqu-Q1-QvH"/>
                             <constraint firstItem="zdB-GY-Jdi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="nBw-3L-2WB"/>
-                            <constraint firstItem="05x-oo-Mgy" firstAttribute="top" secondItem="ApR-Qc-pk4" secondAttribute="bottom" constant="17" id="rfF-P5-Oph"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="inputField" destination="Ahu-2h-PrW" id="S9L-A7-lUO"/>
                         <outlet property="inputField2" destination="ApR-Qc-pk4" id="Pf4-lY-Twf"/>
-                        <outlet property="inputField3" destination="05x-oo-Mgy" id="9oa-z8-iF2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

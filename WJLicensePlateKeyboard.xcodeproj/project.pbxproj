@@ -25,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7BF7FF71E31EA3100677E16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7BF800E1E31ECEF00677E16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BF800F1E31ECEF00677E16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A7BF80101E31ECEF00677E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		A7BF7FF61E31EA3100677E16 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7BF7FF71E31EA3100677E16 /* main.m */,
 			);
 			name = "Supporting Files";
 			path = ../WJLicensePlateKeyBoard;
@@ -113,12 +111,12 @@
 			children = (
 				A7BF800E1E31ECEF00677E16 /* AppDelegate.h */,
 				A7BF800F1E31ECEF00677E16 /* AppDelegate.m */,
+				A7BF80181E31ECEF00677E16 /* ViewController.h */,
+				A7BF80191E31ECEF00677E16 /* ViewController.m */,
 				A7BF80101E31ECEF00677E16 /* Assets.xcassets */,
 				A7BF80111E31ECEF00677E16 /* Base.lproj */,
 				A7BF80161E31ECEF00677E16 /* Info.plist */,
 				A7BF80171E31ECEF00677E16 /* main.m */,
-				A7BF80181E31ECEF00677E16 /* ViewController.h */,
-				A7BF80191E31ECEF00677E16 /* ViewController.m */,
 				A7BF7FF61E31EA3100677E16 /* Supporting Files */,
 			);
 			path = demo;
@@ -164,7 +162,6 @@
 				TargetAttributes = {
 					A7BF7FF21E31EA3100677E16 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = CQ76J9KE2J;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -333,7 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CQ76J9KE2J;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -346,7 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CQ76J9KE2J;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
