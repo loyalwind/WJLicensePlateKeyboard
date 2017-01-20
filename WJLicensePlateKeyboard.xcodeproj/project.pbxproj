@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF800F1E31ECEF00677E16 /* AppDelegate.m */; };
+		A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80101E31ECEF00677E16 /* Assets.xcassets */; };
+		A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80121E31ECEF00677E16 /* LaunchScreen.storyboard */; };
+		A7BF801D1E31ECEF00677E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80141E31ECEF00677E16 /* Main.storyboard */; };
+		A7BF801F1E31ECEF00677E16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80171E31ECEF00677E16 /* main.m */; };
+		A7BF80201E31ECEF00677E16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80191E31ECEF00677E16 /* ViewController.m */; };
+		A7BF80341E31EE8700677E16 /* WjLicensePlateEnglishView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */; };
+		A7BF80351E31EE8700677E16 /* WJLicensePlateKBBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */; };
+		A7BF80361E31EE8700677E16 /* WJLicensePlateKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */; };
+		A7BF80371E31EE8700677E16 /* WJLicensePlateKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */; };
+		A7BF80381E31EE8700677E16 /* WJLicensePlateProvinceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */; };
+		A7BF80391E31EE8700677E16 /* WJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80321E31EE8700677E16 /* WJConst.m */; };
+		A7BF803A1E31F13700677E16 /* ViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80191E31ECEF00677E16 /* ViewController.m */; };
+		A7BF803C1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7BF803B1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BF7FF71E31EA3100677E16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7BF800E1E31ECEF00677E16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7BF800F1E31ECEF00677E16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7BF80101E31ECEF00677E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7BF80131E31ECEF00677E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7BF80151E31ECEF00677E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		A7BF80161E31ECEF00677E16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BF80171E31ECEF00677E16 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7BF80181E31ECEF00677E16 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A7BF80191E31ECEF00677E16 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateEnglishView.h; sourceTree = "<group>"; };
+		A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WjLicensePlateEnglishView.m; sourceTree = "<group>"; };
+		A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateKBBaseView.h; sourceTree = "<group>"; };
+		A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateKBBaseView.m; sourceTree = "<group>"; };
+		A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateKeyboard.h; sourceTree = "<group>"; };
+		A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateKeyboard.m; sourceTree = "<group>"; };
+		A7BF802D1E31EE8700677E16 /* WJLicensePlateKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateKeyView.h; sourceTree = "<group>"; };
+		A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateKeyView.m; sourceTree = "<group>"; };
+		A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateProvinceView.h; sourceTree = "<group>"; };
+		A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateProvinceView.m; sourceTree = "<group>"; };
+		A7BF80311E31EE8700677E16 /* WJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConst.h; sourceTree = "<group>"; };
+		A7BF80321E31EE8700677E16 /* WJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConst.m; sourceTree = "<group>"; };
+		A7BF803B1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WJLicensePlateKeyboard.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7BF7FF01E31EA3100677E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7BF7FEA1E31EA3100677E16 = {
+			isa = PBXGroup;
+			children = (
+				A7BF7FF51E31EA3100677E16 /* WJLicensePlateKeyboard */,
+				A7BF800D1E31EC9700677E16 /* demo */,
+				A7BF7FF41E31EA3100677E16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7BF7FF41E31EA3100677E16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7BF7FF51E31EA3100677E16 /* WJLicensePlateKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */,
+				A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */,
+				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
+				A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */,
+				A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */,
+				A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */,
+				A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */,
+				A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */,
+				A7BF802D1E31EE8700677E16 /* WJLicensePlateKeyView.h */,
+				A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */,
+				A7BF80311E31EE8700677E16 /* WJConst.h */,
+				A7BF80321E31EE8700677E16 /* WJConst.m */,
+				A7BF803B1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle */,
+			);
+			name = WJLicensePlateKeyboard;
+			path = WJLicensePlateKeyBoard;
+			sourceTree = "<group>";
+		};
+		A7BF7FF61E31EA3100677E16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF7FF71E31EA3100677E16 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = ../WJLicensePlateKeyBoard;
+			sourceTree = "<group>";
+		};
+		A7BF800D1E31EC9700677E16 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF800E1E31ECEF00677E16 /* AppDelegate.h */,
+				A7BF800F1E31ECEF00677E16 /* AppDelegate.m */,
+				A7BF80101E31ECEF00677E16 /* Assets.xcassets */,
+				A7BF80111E31ECEF00677E16 /* Base.lproj */,
+				A7BF80161E31ECEF00677E16 /* Info.plist */,
+				A7BF80171E31ECEF00677E16 /* main.m */,
+				A7BF80181E31ECEF00677E16 /* ViewController.h */,
+				A7BF80191E31ECEF00677E16 /* ViewController.m */,
+				A7BF7FF61E31EA3100677E16 /* Supporting Files */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		A7BF80111E31ECEF00677E16 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF80121E31ECEF00677E16 /* LaunchScreen.storyboard */,
+				A7BF80141E31ECEF00677E16 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7BF7FF21E31EA3100677E16 /* WJLicensePlateKeyBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7BF800A1E31EA3200677E16 /* Build configuration list for PBXNativeTarget "WJLicensePlateKeyBoard" */;
+			buildPhases = (
+				A7BF7FEF1E31EA3100677E16 /* Sources */,
+				A7BF7FF01E31EA3100677E16 /* Frameworks */,
+				A7BF7FF11E31EA3100677E16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJLicensePlateKeyBoard;
+			productName = WJLicensePlateKeyBoard;
+			productReference = A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7BF7FEB1E31EA3100677E16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = pengweijian;
+				TargetAttributes = {
+					A7BF7FF21E31EA3100677E16 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CQ76J9KE2J;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A7BF7FEE1E31EA3100677E16 /* Build configuration list for PBXProject "WJLicensePlateKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7BF7FEA1E31EA3100677E16;
+			productRefGroup = A7BF7FF41E31EA3100677E16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7BF7FF21E31EA3100677E16 /* WJLicensePlateKeyBoard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7BF7FF11E31EA3100677E16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BF803C1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle in Resources */,
+				A7BF803A1E31F13700677E16 /* ViewController.m in Resources */,
+				A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */,
+				A7BF801D1E31ECEF00677E16 /* Main.storyboard in Resources */,
+				A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7BF7FEF1E31EA3100677E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BF80371E31EE8700677E16 /* WJLicensePlateKeyView.m in Sources */,
+				A7BF80201E31ECEF00677E16 /* ViewController.m in Sources */,
+				A7BF80361E31EE8700677E16 /* WJLicensePlateKeyboard.m in Sources */,
+				A7BF801F1E31ECEF00677E16 /* main.m in Sources */,
+				A7BF80351E31EE8700677E16 /* WJLicensePlateKBBaseView.m in Sources */,
+				A7BF80341E31EE8700677E16 /* WjLicensePlateEnglishView.m in Sources */,
+				A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */,
+				A7BF80391E31EE8700677E16 /* WJConst.m in Sources */,
+				A7BF80381E31EE8700677E16 /* WJLicensePlateProvinceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7BF80121E31ECEF00677E16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7BF80131E31ECEF00677E16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A7BF80141E31ECEF00677E16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7BF80151E31ECEF00677E16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7BF80081E31EA3200677E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7BF80091E31EA3200677E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7BF800B1E31EA3200677E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQ76J9KE2J;
+				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.session.WJLicensePlateKeyBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7BF800C1E31EA3200677E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQ76J9KE2J;
+				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.session.WJLicensePlateKeyBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7BF7FEE1E31EA3100677E16 /* Build configuration list for PBXProject "WJLicensePlateKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BF80081E31EA3200677E16 /* Debug */,
+				A7BF80091E31EA3200677E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7BF800A1E31EA3200677E16 /* Build configuration list for PBXNativeTarget "WJLicensePlateKeyBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BF800B1E31EA3200677E16 /* Debug */,
+				A7BF800C1E31EA3200677E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7BF7FEB1E31EA3100677E16 /* Project object */;
+}
