@@ -6,7 +6,7 @@
 //  Copyright © 2017年 pengweijian. All rights reserved.
 //
 
-#import "WjLicensePlateProvinceView.h"
+#import "WJLicensePlateProvinceView.h"
 #import "WJLicensePlateKeyView.h"
 #import "WJConst.h"
 
