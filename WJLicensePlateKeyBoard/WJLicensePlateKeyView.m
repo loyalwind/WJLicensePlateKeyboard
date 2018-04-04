@@ -140,14 +140,14 @@ IB_DESIGNABLE
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    self.popLabel.hidden = NO;
+    self.paopaoHidden = NO;
     [[UIDevice currentDevice] playInputClick];
     [super touchesBegan:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    self.popLabel.hidden = YES;
+    self.paopaoHidden = YES;
     [super touchesEnded:touches withEvent:event];
 }
 

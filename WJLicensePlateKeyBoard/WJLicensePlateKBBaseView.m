@@ -168,33 +168,37 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    for (UIView *view in self.keyViews) {
-//        //  不是这种按键类型，直接下一次循环
-//        if (![view isKindOfClass:WJLicensePlateKeyView.class])continue;
-//        WJLicensePlateKeyView *keyView = (WJLicensePlateKeyView *)view;
-//        // 当前按键的paopao 是没有隐藏，就进行隐藏
-//        if (keyView.paopaoHidden == NO){
-//            keyView.paopaoHidden = YES;
-//            // 当前结束触摸点在按键上，就进行插入文字处理
-//            CGPoint location = [touches.anyObject locationInView:self];
-//            if (CGRectContainsPoint(keyView.frame, location)){
-//                if([self.delegate respondsToSelector:@selector(licensePlateKBBaseView:didInsertText:)]){
-//                    [self.delegate licensePlateKBBaseView:self didInsertText:keyView.titleLabel.text];
-//                }
-//            }
-//            break;
+    // 插入文字处理，方式1和方式2都可以，不过方式1更靠谱些，
+    // 方式1
+    for (UIView *view in self.keyViews) {
+        //  不是这种按键类型，直接下一次循环
+        if (![view isKindOfClass:WJLicensePlateKeyView.class])continue;
+        WJLicensePlateKeyView *keyView = (WJLicensePlateKeyView *)view;
+        // 当前按键的paopao 是没有隐藏，就进行隐藏
+        if (keyView.paopaoHidden == NO){
+            keyView.paopaoHidden = YES;
+        }
+        if(self.currentKeyView.isPaopaoHidden == NO){
+            self.currentKeyView.paopaoHidden = YES;
+        }
+        // 当前结束触摸点在按键上，就进行插入文字处理
+        CGPoint location = [touches.anyObject locationInView:self];
+        if (CGRectContainsPoint(keyView.frame, location)){
+            if([self.delegate respondsToSelector:@selector(licensePlateKBBaseView:didInsertText:)]){
+                [self.delegate licensePlateKBBaseView:self didInsertText:keyView.titleLabel.text];
+            }
+            break;
+        }
+    }
+    // 方式2
+//    CGPoint location = [touches.anyObject locationInView:self.currentKeyView];
+//    if (CGRectContainsPoint(self.currentKeyView.bounds, location)){
+//        self.currentKeyView.paopaoHidden = YES;
+//        if([self.delegate respondsToSelector:@selector(licensePlateKBBaseView:didInsertText:)]){
+//            [self.delegate licensePlateKBBaseView:self didInsertText:self.currentKeyView.titleLabel.text];
 //        }
 //    }
     
-    // 插入文字处理
-    WJLicensePlateKeyView *keyView = self.currentKeyView;
-    if (keyView.paopaoHidden == NO) {
-        keyView.paopaoHidden = YES;
-        NSLog(@"%s",__func__);
-        if([self.delegate respondsToSelector:@selector(licensePlateKBBaseView:didInsertText:)]){
-            [self.delegate licensePlateKBBaseView:self didInsertText:keyView.titleLabel.text];
-        }
-    }
     // 是否需要切换键盘
     if (self.needSwitchKBAfterTouchEnd) {
         if([self.delegate respondsToSelector:@selector(licensePlateKBBaseView:didSwitch2KBType:playInput:)]){

@@ -31,7 +31,7 @@
 
     WJLicensePlateKeyView *keyView = [[WJLicensePlateKeyView alloc] init];
     keyView.backgroundColor = [UIColor greenColor];
-    keyView.frame = CGRectMake(10, 150, 40, 40);
+    keyView.frame = CGRectMake(30, 150, 45, 45);
     keyView.text = @"湘";
     [self.view addSubview:keyView];
 }
