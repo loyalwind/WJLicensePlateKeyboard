@@ -15,3 +15,6 @@ NSInteger const kEnglishColumn = 10;
 NSInteger const kProvinceColumn = 9;
 NSInteger const kKBRow = 4;
 CGFloat const kKBHeight = 216.0;
+CGFloat const kiPhoneXBottomPadding = 20.0;
+CGFloat const kiPhoneXFringeHeight = 30.0;
+CGFloat const kiPhoneXSafePadding = 8.0;

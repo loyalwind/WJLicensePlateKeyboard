@@ -22,3 +22,9 @@ UIKIT_EXTERN NSInteger const kProvinceColumn;
 UIKIT_EXTERN NSInteger const kKBRow;
 /** 键盘的高度 (216)*/
 UIKIT_EXTERN CGFloat const kKBHeight;
+/** iPhone X键盘的底部padding (20)*/
+UIKIT_EXTERN CGFloat const kiPhoneXBottomPadding;
+/** iPhone X 刘海padding(30)*/
+UIKIT_EXTERN CGFloat const kiPhoneXFringeHeight;
+/** iPhone X横屏时键盘的水平调整padding (8)*/
+UIKIT_EXTERN CGFloat const kiPhoneXSafePadding;

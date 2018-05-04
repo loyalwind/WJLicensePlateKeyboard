@@ -13,7 +13,7 @@
 		A7BF801D1E31ECEF00677E16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80141E31ECEF00677E16 /* Main.storyboard */; };
 		A7BF801F1E31ECEF00677E16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80171E31ECEF00677E16 /* main.m */; };
 		A7BF80201E31ECEF00677E16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80191E31ECEF00677E16 /* ViewController.m */; };
-		A7BF80341E31EE8700677E16 /* WjLicensePlateEnglishView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */; };
+		A7BF80341E31EE8700677E16 /* WJLicensePlateEnglishView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF80281E31EE8700677E16 /* WJLicensePlateEnglishView.m */; };
 		A7BF80351E31EE8700677E16 /* WJLicensePlateKBBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */; };
 		A7BF80361E31EE8700677E16 /* WJLicensePlateKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */; };
 		A7BF80371E31EE8700677E16 /* WJLicensePlateKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */; };
@@ -35,7 +35,7 @@
 		A7BF80181E31ECEF00677E16 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A7BF80191E31ECEF00677E16 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateEnglishView.h; sourceTree = "<group>"; };
-		A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WjLicensePlateEnglishView.m; sourceTree = "<group>"; };
+		A7BF80281E31EE8700677E16 /* WJLicensePlateEnglishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateEnglishView.m; sourceTree = "<group>"; };
 		A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateKBBaseView.h; sourceTree = "<group>"; };
 		A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJLicensePlateKBBaseView.m; sourceTree = "<group>"; };
 		A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJLicensePlateKeyboard.h; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
 				A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */,
 				A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */,
-				A7BF80281E31EE8700677E16 /* WjLicensePlateEnglishView.m */,
+				A7BF80281E31EE8700677E16 /* WJLicensePlateEnglishView.m */,
 				A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */,
 				A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */,
 				A7BF802D1E31EE8700677E16 /* WJLicensePlateKeyView.h */,
@@ -210,7 +210,7 @@
 				A7BF80361E31EE8700677E16 /* WJLicensePlateKeyboard.m in Sources */,
 				A7BF801F1E31ECEF00677E16 /* main.m in Sources */,
 				A7BF80351E31EE8700677E16 /* WJLicensePlateKBBaseView.m in Sources */,
-				A7BF80341E31EE8700677E16 /* WjLicensePlateEnglishView.m in Sources */,
+				A7BF80341E31EE8700677E16 /* WJLicensePlateEnglishView.m in Sources */,
 				A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */,
 				A7BF80391E31EE8700677E16 /* WJConst.m in Sources */,
 				A7BF80381E31EE8700677E16 /* WJLicensePlateProvinceView.m in Sources */,

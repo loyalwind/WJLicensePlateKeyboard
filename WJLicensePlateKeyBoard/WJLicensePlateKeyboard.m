@@ -11,6 +11,7 @@
 #import "WJLicensePlateProvinceView.h"
 #import "WJLicensePlateKeyView.h"
 #import "WJConst.h"
+#import <sys/utsname.h>
 
 #define kScreenWidth UIScreen.mainScreen.bounds.size.width
 
@@ -25,7 +26,8 @@
 @property (nonatomic, strong) CADisplayLink *deleteBackwordLink;
 /** 幂 */
 @property (nonatomic, assign) NSUInteger power;
-
+/** 是否为iPhoneX */
+@property (nonatomic, assign, getter=isIPhoneX) BOOL iPhoneX;
 @end
 
 
@@ -64,6 +66,9 @@
     // 记录当前显示省份键盘
     _currentKBBaseView = provinceView;
     
+    // 是否为iPhone X
+    self.iPhoneX = [UIDevice isIPhoneX];
+
     // 监听屏幕方向变化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screenOrientationDidChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
 }
@@ -129,8 +134,16 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.provinceView.frame = CGRectInset(self.bounds, kKeyViewMarginH, kKeyViewMarginH);
-    self.englishView.frame = CGRectInset(self.bounds, kKeyViewMarginH, kKeyViewMarginH);
+    CGRect frame;
+    if (self.isIPhoneX) {
+        frame = [self _subKeyBoardViewFrame];
+    }else{
+        frame = self.bounds;
+    }
+    
+    CGRect subViewFrame = CGRectInset(frame, kKeyViewMarginH, kKeyViewMarginH);
+    self.provinceView.frame = subViewFrame;
+    self.englishView.frame = subViewFrame;
 }
 
 #pragma mark - LicensePlateKBBaseViewDelegate
@@ -202,23 +215,6 @@
     _power = 0;
 }
 
-// 是否可回删文字
-- (BOOL)_canDeleteBackword
-{
-    // 选中的文字不为空，可直接删除
-    BOOL empty = self.inputTextView.selectedTextRange.empty;
-    if (!empty) return YES;
-    UITextPosition *startP = self.inputTextView.selectedTextRange.start;
-    UITextPosition *endP = self.inputTextView.selectedTextRange.end;
-    if([startP isKindOfClass:NSClassFromString(@"_UITextKitTextPosition")]&&[endP isKindOfClass:NSClassFromString(@"_UITextKitTextPosition")]){
-        long long startL = [[startP valueForKeyPath:@"_offset"] longLongValue];
-        long long endL = [[endP valueForKeyPath:@"_offset"] longLongValue];
-        //说明光标在（0，0）位置，没有可删除的
-        return (0!=startL || 0!=endL);
-    }else{
-        return YES;
-    }
-}
 #pragma mark - UIInputViewAudioFeedback
 - (BOOL)enableInputClicksWhenVisible
 {
@@ -228,7 +224,10 @@
 - (void)screenOrientationDidChanged:(NSNotification *)note
 {
     [self.currentKBBaseView handleRotateScreenOrOn2OffScreen];
-
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    if (self.isIPhoneX && UIDeviceOrientationIsLandscape(orientation)){
+        [self setNeedsLayout];
+    }
 //    LicensePlateKBBaseView *currentKBBaseView = self.currentKBBaseView;
 //    currentKBBaseView.userInteractionEnabled = YES;
 //    for (UIView *view in currentKBBaseView.keyViews) {
@@ -258,8 +257,77 @@
 //        }
 //    }
 }
+
+#pragma mark - 私有方法
+/** 是否可回删文字 */
+- (BOOL)_canDeleteBackword
+{
+    // 选中的文字不为空，可直接删除
+    BOOL empty = self.inputTextView.selectedTextRange.empty;
+    if (!empty) return YES;
+    UITextPosition *startP = self.inputTextView.selectedTextRange.start;
+    UITextPosition *endP = self.inputTextView.selectedTextRange.end;
+    if([startP isKindOfClass:NSClassFromString(@"_UITextKitTextPosition")]&&[endP isKindOfClass:NSClassFromString(@"_UITextKitTextPosition")]){
+        long long startL = [[startP valueForKeyPath:@"_offset"] longLongValue];
+        long long endL = [[endP valueForKeyPath:@"_offset"] longLongValue];
+        //说明光标在（0，0）位置，没有可删除的
+        return (0!=startL || 0!=endL);
+    }else{
+        return YES;
+    }
+}
+/**
+ 子键盘对称性的的frame，横屏时键盘与屏幕的左边padding = 键盘与屏幕的右边padding, 且刚好等于 kiPhoneXFringeHeight
+ */
+- (CGRect)_subKeyBoardViewFrame
+{
+    CGRect frame = self.bounds;
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    frame.size.height -= kiPhoneXBottomPadding;
+    BOOL isFill = (self.subKBFrameType == KeyboardSubKBFrameTypeFill);
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+//            NSLog(@"竖屏向下");
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            frame.origin.x = isFill ? kiPhoneXSafePadding : kiPhoneXFringeHeight;
+            frame.size.width -= (isFill ? kiPhoneXFringeHeight+2*kiPhoneXSafePadding : 2*kiPhoneXFringeHeight);
+//            NSLog(@"横屏向左");
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            frame.origin.x = (isFill ? kiPhoneXSafePadding + kiPhoneXFringeHeight : kiPhoneXFringeHeight);
+            frame.size.width -= (isFill ? kiPhoneXFringeHeight+2*kiPhoneXSafePadding : 2*kiPhoneXFringeHeight);
+//            NSLog(@"横屏向右");
+            break;
+        default:
+            break;
+    }
+    return frame;
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+@end
+
+@implementation UIDevice (PlatformEx)
+/** 平台名字 */
++ (NSString *)platformName
+{
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+}
+/** 是否为iPhoneX */
++ (BOOL)isIPhoneX
+{
+#if TARGET_IPHONE_SIMULATOR //模拟器
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    return CGSizeEqualToSize(CGSizeMake(375.f, 812.f),size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f),size);
+#else // 真机
+    NSString *platform = [self platformName];
+    return [platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"];
+#endif
 }
 @end
