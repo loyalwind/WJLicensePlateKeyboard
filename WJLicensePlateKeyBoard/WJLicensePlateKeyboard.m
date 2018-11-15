@@ -26,8 +26,8 @@
 @property (nonatomic, strong) CADisplayLink *deleteBackwordLink;
 /** 幂 */
 @property (nonatomic, assign) NSUInteger power;
-/** 是否为iPhoneX */
-@property (nonatomic, assign, getter=isIPhoneX) BOOL iPhoneX;
+/** 是否为刘海屏 */
+@property (nonatomic, assign, getter=isFringeScreen) BOOL fringeScreen;
 @end
 
 
@@ -66,8 +66,8 @@
     // 记录当前显示省份键盘
     _currentKBBaseView = provinceView;
     
-    // 是否为iPhone X
-    self.iPhoneX = [UIDevice isIPhoneX];
+    // 是否为刘海屏
+    self.fringeScreen = [UIDevice isFringeScreen];
 
     // 监听屏幕方向变化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screenOrientationDidChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
@@ -135,7 +135,7 @@
 {
     [super layoutSubviews];
     CGRect frame;
-    if (self.isIPhoneX) {
+    if (self.isFringeScreen) {
         frame = [self _subKeyBoardViewFrame];
     }else{
         frame = self.bounds;
@@ -225,7 +225,7 @@
 {
     [self.currentKBBaseView handleRotateScreenOrOn2OffScreen];
     UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
-    if (self.isIPhoneX && UIDeviceOrientationIsLandscape(orientation)){
+    if (self.isFringeScreen && UIDeviceOrientationIsLandscape(orientation)){
         [self setNeedsLayout];
     }
 //    LicensePlateKBBaseView *currentKBBaseView = self.currentKBBaseView;
@@ -282,7 +282,7 @@
 - (CGRect)_subKeyBoardViewFrame
 {
     CGRect frame = self.bounds;
-    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     frame.size.height -= kiPhoneXBottomPadding;
     BOOL isFill = (self.subKBFrameType == KeyboardSubKBFrameTypeFill);
     switch (orientation) {
@@ -328,6 +328,25 @@
 #else // 真机
     NSString *platform = [self platformName];
     return [platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"];
+#endif
+}
+/** 是否为刘海屏 */
++ (BOOL)isFringeScreen
+{
+#if TARGET_IPHONE_SIMULATOR //模拟器
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    return CGSizeEqualToSize(CGSizeMake(375.f, 812.f),size) ||
+           CGSizeEqualToSize(CGSizeMake(812.f, 375.f),size) ||
+           CGSizeEqualToSize(CGSizeMake(414.f, 896.f),size) ||
+           CGSizeEqualToSize(CGSizeMake(896.f, 414.f),size);
+#else // 真机
+    NSString *platform = [self platformName];
+    return [platform isEqualToString:@"iPhone10,3"] || // iPhone X
+           [platform isEqualToString:@"iPhone10,6"] || // iPhone X
+           [platform isEqualToString:@"iPhone11,2"] || // iPhone XS
+           [platform isEqualToString:@"iPhone11,4"] || // iPhone XS MAX
+           [platform isEqualToString:@"iPhone11,6"] || // iPhone XS MAX
+           [platform isEqualToString:@"iPhone11,8"];   // iPhone XR
 #endif
 }
 @end

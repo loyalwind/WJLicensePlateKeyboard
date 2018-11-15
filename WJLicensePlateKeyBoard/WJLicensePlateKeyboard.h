@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,KeyboardSubKBFrameType) {
 @property (nonatomic, strong) UIFont *titleFont;
 /** 泡泡文字大小(40) */
 @property (nonatomic, strong) UIFont *paopaoFont;
-/** 子键盘布局类型（默认 KeyboardSubKBFrameTypeFill）为了适配iPhone X */
+/** 子键盘布局类型（默认 KeyboardSubKBFrameTypeFill）为了适配刘海屏 */
 @property (nonatomic, assign) KeyboardSubKBFrameType subKBFrameType;
 @end
 
@@ -28,5 +28,7 @@ typedef NS_ENUM(NSInteger,KeyboardSubKBFrameType) {
 /** 平台名字 */
 + (NSString *)platformName;
 /** 是否为iPhoneX */
-+ (BOOL)isIPhoneX;
++ (BOOL)isIPhoneX; //NS_DEPRECATED_IOS(2_0, 7_0, "过期了，请使用 + [UIDevice isFringeScreen] 代替");
+/** 是否为刘海屏 */
++ (BOOL)isFringeScreen;
 @end
