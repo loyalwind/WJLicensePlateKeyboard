@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A06D009B25BFC2C80050ECED /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D009925BFC2C80050ECED /* UIDevice+Extension.m */; };
+		A06D009C25BFC2C80050ECED /* UIDeviceModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */; };
 		A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF800F1E31ECEF00677E16 /* AppDelegate.m */; };
 		A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80101E31ECEF00677E16 /* Assets.xcassets */; };
 		A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80121E31ECEF00677E16 /* LaunchScreen.storyboard */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A06D009825BFC2C80050ECED /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
+		A06D009925BFC2C80050ECED /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIDeviceModel.plist; sourceTree = "<group>"; };
 		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BF800E1E31ECEF00677E16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BF800F1E31ECEF00677E16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		A7BF7FF51E31EA3100677E16 /* WJLicensePlateKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A06D009825BFC2C80050ECED /* UIDevice+Extension.h */,
+				A06D009925BFC2C80050ECED /* UIDevice+Extension.m */,
+				A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */,
 				A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */,
 				A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */,
 				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
@@ -171,6 +179,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -193,6 +202,7 @@
 				A7BF803A1E31F13700677E16 /* ViewController.m in Resources */,
 				A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */,
 				A7BF801D1E31ECEF00677E16 /* Main.storyboard in Resources */,
+				A06D009C25BFC2C80050ECED /* UIDeviceModel.plist in Resources */,
 				A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BF80371E31EE8700677E16 /* WJLicensePlateKeyView.m in Sources */,
+				A06D009B25BFC2C80050ECED /* UIDevice+Extension.m in Sources */,
 				A7BF80201E31ECEF00677E16 /* ViewController.m in Sources */,
 				A7BF80361E31EE8700677E16 /* WJLicensePlateKeyboard.m in Sources */,
 				A7BF801F1E31ECEF00677E16 /* main.m in Sources */,

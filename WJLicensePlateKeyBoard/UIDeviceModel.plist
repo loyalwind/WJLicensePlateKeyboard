@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllDevices</key>
+	<dict>
+		<key>AppleTV1,1</key>
+		<string>APPLE_TV_1G</string>
+		<key>AppleTV2,1</key>
+		<string>APPLE_TV_2G</string>
+		<key>AppleTV3,1</key>
+		<string>APPLE_TV_3G</string>
+		<key>AppleTV3,2</key>
+		<string>APPLE_TV_3_2G</string>
+		<key>AppleTV5,3</key>
+		<string>APPLE_TV_4G</string>
+		<key>Watch1,1</key>
+		<string>APPLE_WATCH_38</string>
+		<key>Watch1,2</key>
+		<string>APPLE_WATCH_42</string>
+		<key>Watch2,3</key>
+		<string>APPLE_WATCH_SERIES_2_38</string>
+		<key>Watch2,4</key>
+		<string>APPLE_WATCH_SERIES_2_42</string>
+		<key>Watch2,6</key>
+		<string>APPLE_WATCH_SERIES_1_38</string>
+		<key>Watch2,7</key>
+		<string>APPLE_WATCH_SERIES_1_42</string>
+		<key>i386</key>
+		<string>iPhone i386 Simulator</string>
+		<key>x86_64</key>
+		<string>iPhone x64 Simulator</string>
+		<key>iPod1,1</key>
+		<string>iPod Touch 1G</string>
+		<key>iPod2,1</key>
+		<string>iPod Touch 2G</string>
+		<key>iPod3,1</key>
+		<string>iPod Touch 3G</string>
+		<key>iPod4,1</key>
+		<string>iPod Touch 4G</string>
+		<key>iPod5,1</key>
+		<string>iPod Touch 5G</string>
+		<key>iPod7,1</key>
+		<string>iPod Touch 6G</string>
+		<key>iPad1,1</key>
+		<string>iPad</string>
+		<key>iPad1,2</key>
+		<string>iPad 3G</string>
+		<key>iPad2,1</key>
+		<string>iPad 2 WIFI</string>
+		<key>iPad2,2</key>
+		<string>iPad 2</string>
+		<key>iPad2,3</key>
+		<string>iPad 2 CDMA</string>
+		<key>iPad2,4</key>
+		<string>iPad 2</string>
+		<key>iPad2,5</key>
+		<string>iPad Mini WIFI</string>
+		<key>iPad2,6</key>
+		<string>iPad Mini</string>
+		<key>iPad2,7</key>
+		<string>iPad Mini WIFI_CDMA</string>
+		<key>iPad3,1</key>
+		<string>iPad 3 WIFI</string>
+		<key>iPad3,2</key>
+		<string>iPad 3 WIFI_CDMA</string>
+		<key>iPad3,3</key>
+		<string>iPad 3</string>
+		<key>iPad3,4</key>
+		<string>iPad 4 WIFI</string>
+		<key>iPad3,5</key>
+		<string>iPad 4</string>
+		<key>iPad3,6</key>
+		<string>iPad 4 GSM_CDMA</string>
+		<key>iPad4,1</key>
+		<string>iPad Air WIFI</string>
+		<key>iPad4,2</key>
+		<string>iPad Air WIFI_GSM</string>
+		<key>iPad4,3</key>
+		<string>iPad Air WIFI_CDMA</string>
+		<key>iPad4,4</key>
+		<string>iPad Mini RETINA_WIFI</string>
+		<key>iPad4,5</key>
+		<string>iPad Mini RETINA_WIFI_CDMA</string>
+		<key>iPad4,6</key>
+		<string>iPad Mini RETINA_WIFI_CELLULAR_CN</string>
+		<key>iPad4,7</key>
+		<string>iPad Mini 3 WIFI</string>
+		<key>iPad4,8</key>
+		<string>iPad Mini 3 WIFI_CELLULAR</string>
+		<key>iPad4,9</key>
+		<string>iPad Mini 3 WIFI_CELLULAR_CN</string>
+		<key>iPad5,1</key>
+		<string>iPad Mini 4 WIFI</string>
+		<key>iPad5,2</key>
+		<string>iPad Mini 4 WIFI_CELLULAR</string>
+		<key>iPad5,3</key>
+		<string>iPad Air 2 WIFI</string>
+		<key>iPad5,4</key>
+		<string>iPad Air 2 WIFI_CELLULAR</string>
+		<key>iPad6,11</key>
+		<string>iPad 5 WIFI</string>
+		<key>iPad6,12</key>
+		<string>iPad 5 WIFI_CELLULAR</string>
+		<key>iPad6,3</key>
+		<string>iPad Pro 9.7 WIFI</string>
+		<key>iPad6,4</key>
+		<string>iPad Pro 9.7 WIFI_CELLULAR</string>
+		<key>iPad6,7</key>
+		<string>iPad Pro WIFI</string>
+		<key>iPad6,8</key>
+		<string>iPad Pro WIFI_CELLULAR</string>
+		<key>iPad7,1</key>
+		<string>iPad Pro 2G WIFI</string>
+		<key>iPad7,11</key>
+		<string>iPad 7 (WiFi)</string>
+		<key>iPad7,12</key>
+		<string>iPad 7 (WiFi/Cellular)</string>
+		<key>iPad7,2</key>
+		<string>iPad Pro 2G WIFI_CELLULAR</string>
+		<key>iPad7,3</key>
+		<string>iPad Pro 10.5 WIFI</string>
+		<key>iPad7,4</key>
+		<string>iPad Pro 10.5 WIFI_CELLULAR</string>
+		<key>iPad7,5</key>
+		<string>iPad 6 (WiFi)</string>
+		<key>iPad7,6</key>
+		<string>iPad 6 (WiFi/Cellular)</string>
+		<key>iPad8,1</key>
+		<string>iPad Pro 11-inch 1st-gen (WiFi)</string>
+		<key>iPad8,10</key>
+		<string>iPad Pro 11-inch 2nd-gen (WiFi/Cellular)</string>
+		<key>iPad8,11</key>
+		<string>iPad Pro 12.9-inch 4th-gen (WiFi)</string>
+		<key>iPad8,12</key>
+		<string>iPad Pro 12.9-inch 4th-gen (WiFi/Cellular)</string>
+		<key>iPad8,2</key>
+		<string>iPad Pro 11-inch 1st-gen (WiFi)</string>
+		<key>iPad8,3</key>
+		<string>iPad Pro 11-inch 1st-gen (WiFi/Cellular)</string>
+		<key>iPad8,4</key>
+		<string>iPad Pro 11-inch 1st-gen (WiFi/Cellular)</string>
+		<key>iPad8,5</key>
+		<string>iPad Pro 12.9-inch 3rd-gen (WiFi)</string>
+		<key>iPad8,6</key>
+		<string>iPad Pro 12.9-inch 3rd-gen (WiFi)</string>
+		<key>iPad8,7</key>
+		<string>iPad Pro 12.9-inch 3rd-gen (WiFi/Cellular)</string>
+		<key>iPad8,8</key>
+		<string>iPad Pro 12.9-inch 3rd-gen (WiFi/Cellular)</string>
+		<key>iPad8,9</key>
+		<string>iPad Pro 11-inch 2nd-gen (WiFi)</string>
+		<key>iPad11,1</key>
+		<string>iPad Mini 5 (WiFi)</string>
+		<key>iPad11,2</key>
+		<string>iPad Mini 5 (WiFi/Cellular)</string>
+		<key>iPad11,3</key>
+		<string>iPad Air 3 (WiFi)</string>
+		<key>iPad11,4</key>
+		<string>iPad Air 3 (WiFi/Cellular)</string>
+		<key>iPad11,6</key>
+		<string>iPad 8 (WiFi)</string>
+		<key>iPad11,7</key>
+		<string>iPad 8 (WiFi/Cellular)</string>
+		<key>iPad13,1</key>
+		<string>iPad Air 4 (WiFi)</string>
+		<key>iPad13,2</key>
+		<string>iPad Air 4 (WiFi/Cellular)</string>
+		<key>iPhone1,1</key>
+		<string>iPhone 2G</string>
+		<key>iPhone1,2</key>
+		<string>iPhone 3G</string>
+		<key>iPhone2,1</key>
+		<string>iPhone 3GS</string>
+		<key>iPhone3,1</key>
+		<string>iPhone 4</string>
+		<key>iPhone3,2</key>
+		<string>iPhone 4</string>
+		<key>iPhone3,3</key>
+		<string>iPhone 4 CDMA</string>
+		<key>iPhone4,1</key>
+		<string>iPhone 4s</string>
+		<key>iPhone5,1</key>
+		<string>iPhone 5</string>
+		<key>iPhone5,2</key>
+		<string>iPhone 5 CDMA_GSM</string>
+		<key>iPhone5,3</key>
+		<string>iPhone 5c</string>
+		<key>iPhone5,4</key>
+		<string>iPhone 5c CDMA_GSM</string>
+		<key>iPhone6,1</key>
+		<string>iPhone 5s</string>
+		<key>iPhone6,2</key>
+		<string>iPhone 5s CDMA_GSM</string>
+		<key>iPhone7,1</key>
+		<string>iPhone 6 Plus</string>
+		<key>iPhone7,2</key>
+		<string>iPhone 6</string>
+		<key>iPhone8,1</key>
+		<string>iPhone 6s</string>
+		<key>iPhone8,2</key>
+		<string>iPhone 6s Plus</string>
+		<key>iPhone8,4</key>
+		<string>iPhone SE</string>
+		<key>iPhone9,1</key>
+		<string>iPhone 7</string>
+		<key>iPhone9,2</key>
+		<string>iPhone 7 Plus</string>
+		<key>iPhone9,3</key>
+		<string>iPhone 7 GSM</string>
+		<key>iPhone9,4</key>
+		<string>iPhone 7 Plus_GSM</string>
+		<key>iPhone10,1</key>
+		<string>iPhone 8 CN</string>
+		<key>iPhone10,2</key>
+		<string>iPhone 8 Plus_CN</string>
+		<key>iPhone10,3</key>
+		<string>iPhone X CN</string>
+		<key>iPhone10,4</key>
+		<string>iPhone 8</string>
+		<key>iPhone10,5</key>
+		<string>iPhone 8 Plus</string>
+		<key>iPhone10,6</key>
+		<string>iPhone X</string>
+		<key>iPhone11,2</key>
+		<string>iPhone Xs</string>
+		<key>iPhone11,4</key>
+		<string>iPhone Xs_Max</string>
+		<key>iPhone11,6</key>
+		<string>iPhone Xs_Max</string>
+		<key>iPhone11,8</key>
+		<string>iPhone Xr</string>
+		<key>iPhone12,1</key>
+		<string>iPhone 11</string>
+		<key>iPhone12,3</key>
+		<string>iPhone 11 Pro</string>
+		<key>iPhone12,5</key>
+		<string>iPhone 11 Pro Max</string>
+		<key>iPhone12,8</key>
+		<string>iPhone SE 2nd-gen</string>
+		<key>iPhone13,1</key>
+		<string>iPhone 12 mini</string>
+		<key>iPhone13,2</key>
+		<string>iPhone 12</string>
+		<key>iPhone13,3</key>
+		<string>iPhone 12 Pro</string>
+		<key>iPhone13,4</key>
+		<string>iPhone 12 Pro Max</string>
+	</dict>
+	<key>FringeDevices</key>
+	<array>
+		<string>iPhone10,3</string>
+		<string>iPhone10,6</string>
+		<string>iPhone11,2</string>
+		<string>iPhone11,4</string>
+		<string>iPhone11,6</string>
+		<string>iPhone11,8</string>
+		<string>iPhone12,1</string>
+		<string>iPhone12,3</string>
+		<string>iPhone12,5</string>
+		<string>iPhone13,1</string>
+		<string>iPhone13,2</string>
+		<string>iPhone13,3</string>
+		<string>iPhone13,4</string>
+	</array>
+</dict>
+</plist>

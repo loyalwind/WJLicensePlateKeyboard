@@ -11,6 +11,7 @@
 #import "WJLicensePlateProvinceView.h"
 #import "WJLicensePlateKeyView.h"
 #import "WJConst.h"
+#import "UIDevice+Extension.h"
 #import <sys/utsname.h>
 
 #define kScreenWidth UIScreen.mainScreen.bounds.size.width
@@ -277,26 +278,26 @@
     }
 }
 /**
- 子键盘对称性的的frame，横屏时键盘与屏幕的左边padding = 键盘与屏幕的右边padding, 且刚好等于 kiPhoneXFringeHeight
+ 子键盘对称性的的frame，横屏时键盘与屏幕的左边padding = 键盘与屏幕的右边padding, 且刚好等于 kFringeTopPadding
  */
 - (CGRect)_subKeyBoardViewFrame
 {
     CGRect frame = self.bounds;
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    frame.size.height -= kiPhoneXBottomPadding;
+    frame.size.height -= kFringeBottomPadding;
     BOOL isFill = (self.subKBFrameType == KeyboardSubKBFrameTypeFill);
     switch (orientation) {
         case UIInterfaceOrientationPortrait:
 //            NSLog(@"竖屏向下");
             break;
         case UIInterfaceOrientationLandscapeLeft:
-            frame.origin.x = isFill ? kiPhoneXSafePadding : kiPhoneXFringeHeight;
-            frame.size.width -= (isFill ? kiPhoneXFringeHeight+2*kiPhoneXSafePadding : 2*kiPhoneXFringeHeight);
+            frame.origin.x = isFill ? kFineTuningSafePadding : kFringeTopPadding;
+            frame.size.width -= (isFill ? kFringeTopPadding+2*kFineTuningSafePadding : 2*kFringeTopPadding);
 //            NSLog(@"横屏向左");
             break;
         case UIInterfaceOrientationLandscapeRight:
-            frame.origin.x = (isFill ? kiPhoneXSafePadding + kiPhoneXFringeHeight : kiPhoneXFringeHeight);
-            frame.size.width -= (isFill ? kiPhoneXFringeHeight+2*kiPhoneXSafePadding : 2*kiPhoneXFringeHeight);
+            frame.origin.x = (isFill ? kFineTuningSafePadding + kFringeTopPadding : kFringeTopPadding);
+            frame.size.width -= (isFill ? kFringeTopPadding+2*kFineTuningSafePadding : 2*kFringeTopPadding);
 //            NSLog(@"横屏向右");
             break;
         default:
@@ -308,45 +309,5 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-@end
-
-@implementation UIDevice (PlatformEx)
-/** 平台名字 */
-+ (NSString *)platformName
-{
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-}
-/** 是否为iPhoneX */
-+ (BOOL)isIPhoneX
-{
-#if TARGET_IPHONE_SIMULATOR //模拟器
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    return CGSizeEqualToSize(CGSizeMake(375.f, 812.f),size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f),size);
-#else // 真机
-    NSString *platform = [self platformName];
-    return [platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"];
-#endif
-}
-/** 是否为刘海屏 */
-+ (BOOL)isFringeScreen
-{
-#if TARGET_IPHONE_SIMULATOR //模拟器
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    return CGSizeEqualToSize(CGSizeMake(375.f, 812.f),size) ||
-           CGSizeEqualToSize(CGSizeMake(812.f, 375.f),size) ||
-           CGSizeEqualToSize(CGSizeMake(414.f, 896.f),size) ||
-           CGSizeEqualToSize(CGSizeMake(896.f, 414.f),size);
-#else // 真机
-    NSString *platform = [self platformName];
-    return [platform isEqualToString:@"iPhone10,3"] || // iPhone X
-           [platform isEqualToString:@"iPhone10,6"] || // iPhone X
-           [platform isEqualToString:@"iPhone11,2"] || // iPhone XS
-           [platform isEqualToString:@"iPhone11,4"] || // iPhone XS MAX
-           [platform isEqualToString:@"iPhone11,6"] || // iPhone XS MAX
-           [platform isEqualToString:@"iPhone11,8"];   // iPhone XR
-#endif
 }
 @end

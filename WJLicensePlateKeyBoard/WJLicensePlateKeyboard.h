@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger,KeyboardSubKBFrameType) {
     KeyboardSubKBFrameTypeFill = 0,/**< 填充型 ,横屏时键盘与刘海的padding = 键盘与home键的padding */
-    KeyboardSubKBFrameTypeSymmetric /**< 对称型 ,横屏时键盘与屏幕的左边padding = 键盘与屏幕的右边padding, 且刚好等于 kiPhoneXFringeHeight */
+    KeyboardSubKBFrameTypeSymmetric /**< 对称型 ,横屏时键盘与屏幕的左边padding = 键盘与屏幕的右边padding, 且刚好等于 kFringeTopPadding */
 };
 
 @interface WJLicensePlateKeyboard : UIView
@@ -24,11 +24,3 @@ typedef NS_ENUM(NSInteger,KeyboardSubKBFrameType) {
 @property (nonatomic, assign) KeyboardSubKBFrameType subKBFrameType;
 @end
 
-@interface UIDevice (PlatformEx)
-/** 平台名字 */
-+ (NSString *)platformName;
-/** 是否为iPhoneX */
-+ (BOOL)isIPhoneX; //NS_DEPRECATED_IOS(2_0, 7_0, "过期了，请使用 + [UIDevice isFringeScreen] 代替");
-/** 是否为刘海屏 */
-+ (BOOL)isFringeScreen;
-@end
