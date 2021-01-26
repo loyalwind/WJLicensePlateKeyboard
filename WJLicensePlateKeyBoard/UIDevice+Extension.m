@@ -32,7 +32,7 @@ static CGSize __fringeScreenSizes[] = {
 
 + (void)initialize
 {
-    NSString *path = [NSBundle.mainBundle pathForResource:@"UIDeviceModel.plist" ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"WJLicensePlateKeyboard.bundle/UIDeviceModel" ofType:@"plist"];
     __devicesMap = [NSDictionary dictionaryWithContentsOfFile:path];
 }
 

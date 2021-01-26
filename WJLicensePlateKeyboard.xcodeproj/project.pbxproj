@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A06D009B25BFC2C80050ECED /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D009925BFC2C80050ECED /* UIDevice+Extension.m */; };
-		A06D009C25BFC2C80050ECED /* UIDeviceModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */; };
 		A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF800F1E31ECEF00677E16 /* AppDelegate.m */; };
 		A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80101E31ECEF00677E16 /* Assets.xcassets */; };
 		A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80121E31ECEF00677E16 /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		A06D009825BFC2C80050ECED /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		A06D009925BFC2C80050ECED /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
-		A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIDeviceModel.plist; sourceTree = "<group>"; };
 		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BF800E1E31ECEF00677E16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BF800F1E31ECEF00677E16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			children = (
 				A06D009825BFC2C80050ECED /* UIDevice+Extension.h */,
 				A06D009925BFC2C80050ECED /* UIDevice+Extension.m */,
-				A06D009A25BFC2C80050ECED /* UIDeviceModel.plist */,
 				A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */,
 				A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */,
 				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
@@ -202,7 +199,6 @@
 				A7BF803A1E31F13700677E16 /* ViewController.m in Resources */,
 				A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */,
 				A7BF801D1E31ECEF00677E16 /* Main.storyboard in Resources */,
-				A06D009C25BFC2C80050ECED /* UIDeviceModel.plist in Resources */,
 				A7BF801C1E31ECEF00677E16 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -346,12 +342,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyalwind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "475859dc-8e03-4ec1-843e-731c1abf35e6";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -364,11 +361,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loyalwind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

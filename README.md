@@ -1,8 +1,30 @@
 # WJLicensePlateKeyboard
 自定义的车牌号码输入键盘，支持横竖屏模式，支持省份简称汉字，英文字母，数字的输入，输入时可以播放音效。
 
-#gif
-![竖屏](https://github.com/loyalwind/WJLicensePlateKeyboard/blob/master/demo/gif/portrait.gif)
 
-![横屏](https://github.com/loyalwind/WJLicensePlateKeyboard/blob/master/demo/gif/landscape.gif)
+
+###如何使用
+
++ 方式1.下载源码，把`WJLicensePlateKeyBoard`文件夹拖到项目中，
+  + `Destination` 勾选 `Cope items if needed`
+  + `Added folders` 选择 `Create groups`
+
++ 方式2. 通过 `Cocoapods` 安装
+
+  ```ruby
+  platform :ios, '8.0'
+  target 'Your Target' do
+  
+  pod 'WJLicensePlateKeyboard'
+  
+  end
+  ```
+
+  
+
+  ### 效果图
+
+![竖屏](demo/gif/portrait.gif)
+
+![横屏](demo/gif/landscape.gif)
 

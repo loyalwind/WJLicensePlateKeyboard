@@ -27,9 +27,9 @@
 		<key>Watch2,7</key>
 		<string>APPLE_WATCH_SERIES_1_42</string>
 		<key>i386</key>
-		<string>iPhone i386 Simulator</string>
+		<string>i386 Simulator</string>
 		<key>x86_64</key>
-		<string>iPhone x64 Simulator</string>
+		<string>x86_64 Simulator</string>
 		<key>iPod1,1</key>
 		<string>iPod Touch 1G</string>
 		<key>iPod2,1</key>
