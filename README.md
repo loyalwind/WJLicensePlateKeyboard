@@ -42,7 +42,7 @@
 
 ### 效果图
 
-![竖屏](demo/gif/portrait.gif)
+![竖屏](https://github.com/loyalwind/WJLicensePlateKeyboard/blob/master/demo/gif/portrait.gif)
 
-![横屏](demo/gif/landscape.gif)
+![横屏](https://github.com/loyalwind/WJLicensePlateKeyboard/blob/master/demo/gif/landscape.gif)
 
