@@ -10,29 +10,12 @@
 #import "WJLicensePlateKeyView.h"
 #import "WJConst.h"
 
-@interface WJLicensePlateEnglishView ()
-/** 英文字符集  */
-@property (nonatomic, strong) NSArray <NSString *> *characters;
-
-@end
-
 @implementation WJLicensePlateEnglishView
-
-@synthesize characters = _characters;
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        UIButton *button = [self viewWithTag:WJFunctionButtonTypeSwitch];
-        [button setTitle:@"中文" forState: UIControlStateNormal];
-    }
-    return self;
-}
 
 - (NSArray<NSString *> *)characters
 {
     if (!_characters) {
-        NSString *str = @"1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
+        NSString *str = @"1234567890QWERTYUPASDFGHJKLZXCVBNM";
         NSMutableArray *temArray = [NSMutableArray array];
         for (int i=0; i<str.length; i++) {
             NSString *subStr = [str substringWithRange:NSMakeRange(i, 1)];
@@ -41,6 +24,9 @@
         _characters = temArray;
     }
     return _characters;
+}
+- (NSString *)switchText {
+    return @"中文";
 }
 
 - (NSInteger)rows

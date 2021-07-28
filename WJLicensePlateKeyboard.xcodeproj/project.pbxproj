@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F5F866E26B1DA280022BE5C /* EnglishKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F866D26B1DA280022BE5C /* EnglishKeyboardView.m */; };
 		A06D009B25BFC2C80050ECED /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A06D009925BFC2C80050ECED /* UIDevice+Extension.m */; };
 		A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BF800F1E31ECEF00677E16 /* AppDelegate.m */; };
 		A7BF801B1E31ECEF00677E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BF80101E31ECEF00677E16 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F5F866C26B1DA280022BE5C /* EnglishKeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnglishKeyboardView.h; sourceTree = "<group>"; };
+		5F5F866D26B1DA280022BE5C /* EnglishKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishKeyboardView.m; sourceTree = "<group>"; };
 		A06D009825BFC2C80050ECED /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		A06D009925BFC2C80050ECED /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
 		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,19 +88,19 @@
 			children = (
 				A06D009825BFC2C80050ECED /* UIDevice+Extension.h */,
 				A06D009925BFC2C80050ECED /* UIDevice+Extension.m */,
-				A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */,
-				A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */,
-				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
-				A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */,
-				A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */,
-				A7BF80281E31EE8700677E16 /* WJLicensePlateEnglishView.m */,
-				A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */,
-				A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */,
-				A7BF802D1E31EE8700677E16 /* WJLicensePlateKeyView.h */,
-				A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */,
 				A7BF80311E31EE8700677E16 /* WJConst.h */,
 				A7BF80321E31EE8700677E16 /* WJConst.m */,
+				A7BF80271E31EE8700677E16 /* WJLicensePlateEnglishView.h */,
+				A7BF80281E31EE8700677E16 /* WJLicensePlateEnglishView.m */,
+				A7BF80291E31EE8700677E16 /* WJLicensePlateKBBaseView.h */,
+				A7BF802A1E31EE8700677E16 /* WJLicensePlateKBBaseView.m */,
 				A7BF803B1E31F2D900677E16 /* WJLicensePlateKeyboard.bundle */,
+				A7BF802B1E31EE8700677E16 /* WJLicensePlateKeyboard.h */,
+				A7BF802C1E31EE8700677E16 /* WJLicensePlateKeyboard.m */,
+				A7BF802D1E31EE8700677E16 /* WJLicensePlateKeyView.h */,
+				A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */,
+				A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */,
+				A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */,
 			);
 			name = WJLicensePlateKeyboard;
 			path = WJLicensePlateKeyBoard;
@@ -123,6 +126,8 @@
 				A7BF80161E31ECEF00677E16 /* Info.plist */,
 				A7BF80171E31ECEF00677E16 /* main.m */,
 				A7BF7FF61E31EA3100677E16 /* Supporting Files */,
+				5F5F866C26B1DA280022BE5C /* EnglishKeyboardView.h */,
+				5F5F866D26B1DA280022BE5C /* EnglishKeyboardView.m */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				A7BF80351E31EE8700677E16 /* WJLicensePlateKBBaseView.m in Sources */,
 				A7BF80341E31EE8700677E16 /* WJLicensePlateEnglishView.m in Sources */,
 				A7BF801A1E31ECEF00677E16 /* AppDelegate.m in Sources */,
+				5F5F866E26B1DA280022BE5C /* EnglishKeyboardView.m in Sources */,
 				A7BF80391E31EE8700677E16 /* WJConst.m in Sources */,
 				A7BF80381E31EE8700677E16 /* WJLicensePlateProvinceView.m in Sources */,
 			);

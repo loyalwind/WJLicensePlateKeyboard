@@ -10,23 +10,8 @@
 #import "WJLicensePlateKeyView.h"
 #import "WJConst.h"
 
-@interface WJLicensePlateProvinceView ()
-/** 英文字符集  */
-@property (nonatomic, strong) NSArray <NSString *> *characters;
-
-@end
-
 @implementation WJLicensePlateProvinceView
-@synthesize characters = _characters;
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        UIButton *button = [self viewWithTag:WJFunctionButtonTypeSwitch];
-        [button setTitle:@"英文" forState: UIControlStateNormal];
-    }
-    return self;
-}
 - (NSArray<NSString *> *)characters
 {
     if (!_characters) {
@@ -35,6 +20,9 @@
                         @"云",@"贵",@"蒙",@"闽",@"甘",@"青",@"宁",@"新",@"藏",@"警"];
     }
     return _characters;
+}
+- (NSString *)switchText {
+    return @"英文";
 }
 - (NSInteger)rows
 {

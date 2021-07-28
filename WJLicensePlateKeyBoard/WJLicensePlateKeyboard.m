@@ -17,10 +17,15 @@
 #define kScreenWidth UIScreen.mainScreen.bounds.size.width
 
 @interface WJLicensePlateKeyboard ()<UIInputViewAudioFeedback,LicensePlateKBBaseViewDelegate>
+{
+@private
+    NSArray<NSString *> *_zhCharacters;
+    NSArray<NSString *> *_enCharacters;
+}
 /** 中文省份键盘 */
-@property (nonatomic, weak) WJLicensePlateProvinceView *provinceView;
+@property (nonatomic, weak) WJLicensePlateKBBaseView *provinceView;
 /** 英文字符数字键盘 */
-@property (nonatomic, weak) WJLicensePlateEnglishView *englishView;
+@property (nonatomic, weak) WJLicensePlateKBBaseView *englishView;
 /** 当前显示的键盘 */
 @property (nonatomic, weak) WJLicensePlateKBBaseView *currentKBBaseView;
 /** 定时器  */
@@ -38,34 +43,69 @@
 {
     CGRect keyBoardFrame = CGRectMake(0, 0, kScreenWidth, kKBHeight);
     if (self = [super initWithFrame:keyBoardFrame]) {
-        [self setupSubKeyBoardViews];
+        [self setupSubKeyBoardWithZhCharacters:_zhCharacters enCharacters:_enCharacters];
     }
     return self;
 }
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.frame = CGRectMake(0, 0, kScreenWidth, kKBHeight);
-    [self setupSubKeyBoardViews];
+
+- (instancetype)initWithZhCharacters:(NSArray<NSString *> *)zhCharacters
+                        enCharacters:(NSArray<NSString *> *)enCharacters {
+    CGRect keyBoardFrame = CGRectMake(0, 0, kScreenWidth, kKBHeight);
+    if (self = [super initWithFrame:keyBoardFrame]) {
+        _zhCharacters = zhCharacters;
+        _enCharacters = enCharacters;
+        [self setupSubKeyBoardWithZhCharacters:zhCharacters enCharacters:enCharacters];
+    }
+    return self;
 }
-- (void)setupSubKeyBoardViews
+
+- (instancetype)initWithChineseView:(WJLicensePlateKBBaseView *)chineseView
+                        englishView:(WJLicensePlateKBBaseView *)englishView {
+    CGRect keyBoardFrame = CGRectMake(0, 0, kScreenWidth, kKBHeight);
+    if (self = [super initWithFrame:keyBoardFrame]) {
+        [self setupSubKeyBoardWithChineseView:chineseView englishView:englishView];
+    }
+    return self;
+}
+
+- (void)setChineseCharacters:(NSArray <NSString *> *)chineseCharacters {
+    _zhCharacters = chineseCharacters;
+    _provinceView.characters = chineseCharacters;
+}
+
+- (void)setEnglishCharacters:(NSArray <NSString *> *)englishCharacters {
+    _enCharacters = englishCharacters;
+    _englishView.characters = englishCharacters;
+}
+
+- (void)setupSubKeyBoardWithZhCharacters:(NSArray<NSString *> *)zhCharacters
+                            enCharacters:(NSArray<NSString *> *)enCharacters
 {
     // 省份键盘
-    WJLicensePlateProvinceView *provinceView = [[WJLicensePlateProvinceView alloc] init];
-    [self addSubview:provinceView];
-    provinceView.hidden = NO;
-    _provinceView = provinceView;
-    provinceView.delegate = self;
+    WJLicensePlateProvinceView *chineseView = [[WJLicensePlateProvinceView alloc] initWithCharacters:zhCharacters];
+    // 英文数字键盘
+    WJLicensePlateEnglishView *englishView = [[WJLicensePlateEnglishView alloc] initWithCharacters:enCharacters];
+    [self setupSubKeyBoardWithChineseView:chineseView englishView:englishView];
+}
+- (void)setupSubKeyBoardWithChineseView:(WJLicensePlateKBBaseView *)chineseView
+                             englishView:(WJLicensePlateKBBaseView *)englishView
+{
+    // 省份键盘
+    [chineseView removeFromSuperview];
+    [self addSubview:chineseView];
+    chineseView.hidden = NO;
+    chineseView.delegate = self;
+    _provinceView = chineseView;
     
     // 英文数字键盘
-    WJLicensePlateEnglishView *englishView = [[WJLicensePlateEnglishView alloc] init];
-    englishView.hidden = YES;
+    [englishView removeFromSuperview];
     [self addSubview:englishView];
-    _englishView = englishView;
+    englishView.hidden = YES;
     englishView.delegate = self;
+    _englishView = englishView;
     
     // 记录当前显示省份键盘
-    _currentKBBaseView = provinceView;
+    _currentKBBaseView = _provinceView;
     
     // 是否为刘海屏
     self.fringeScreen = [UIDevice isFringeScreen];
@@ -130,6 +170,13 @@
         [_deleteBackwordLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     }
     return _deleteBackwordLink;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.frame = CGRectMake(0, 0, kScreenWidth, kKBHeight);
+    [self setupSubKeyBoardWithZhCharacters:_zhCharacters enCharacters:_enCharacters];
 }
 
 - (void)layoutSubviews

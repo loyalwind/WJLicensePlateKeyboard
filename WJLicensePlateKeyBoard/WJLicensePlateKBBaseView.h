@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WJLicensePlateKBBaseView,LicensePlateKeyView;
+@class WJLicensePlateKBBaseView,WJLicensePlateKeyView;
 
 /**
  功能按钮类型
@@ -42,8 +42,9 @@ typedef NS_ENUM(NSInteger, WJLicensePlateKeyboardType) {
  @param switch2KBType 切换到哪种键盘类型
  @param playInput 是否需要播放切换声音
  */
-- (void)licensePlateKBBaseView:(WJLicensePlateKBBaseView *)kbBaseView didSwitch2KBType:(WJLicensePlateKeyboardType)switch2KBType playInput:(BOOL)playInput;
-
+- (void)licensePlateKBBaseView:(WJLicensePlateKBBaseView *)kbBaseView
+              didSwitch2KBType:(WJLicensePlateKeyboardType)switch2KBType
+                     playInput:(BOOL)playInput;
 /**
  通知代理插入文字
  @param text 插入的文字
@@ -68,8 +69,20 @@ typedef NS_ENUM(NSInteger, WJLicensePlateKeyboardType) {
 @end
 
 @interface WJLicensePlateKBBaseView : UIView
+{
+@protected
+    NSArray <NSString *> *_characters;
+}
+
+/// 根据给定字符集合初始化
+/// @param characters 给定字符集合
+- (instancetype)initWithCharacters:(NSArray <NSString *> *)characters;
 /** 字符集  */
-@property (nonatomic, strong, readonly) NSArray <NSString *> *characters;
+@property (nonatomic, strong) NSArray <NSString *> *characters;
+/** 完成字符文字 (完成) */
+@property (nonatomic, strong, readonly) NSString *doneText;
+/** 切换字符文字（中文, 英文） */
+@property (nonatomic, strong, readonly) NSString *switchText;
 /** 按键集合  */
 @property (nonatomic, strong, readonly) NSArray <__kindof UIView *> *keyViews;
 /** 行数 */

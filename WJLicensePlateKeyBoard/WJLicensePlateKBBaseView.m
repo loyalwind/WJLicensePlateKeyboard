@@ -15,57 +15,96 @@
     /** 按钮集合  */
     NSMutableArray <__kindof UIView *> *_keyViews;
 }
-/** 英文字符集  */
-
 /** 当前显示的按键 view */
 @property (nonatomic, weak) WJLicensePlateKeyView *currentKeyView;
 @end
 
 @implementation WJLicensePlateKBBaseView
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        NSUInteger totalCharacter = self.characters.count;
-        NSInteger rows = self.rows;
-        NSInteger colunms = self.columns;
-        _keyViews = [NSMutableArray array];
-
-        for (NSUInteger index = 0; index < totalCharacter; index++) {
-            NSString *character = self.characters[index];
-            WJLicensePlateKeyView *keyView = [[WJLicensePlateKeyView alloc] init];
-            keyView.titleLabel.text = character;
-            [self addSubview:keyView];
-            [_keyViews addObject:keyView];
-            
-            if (index == colunms * (rows-1)-2) { // 删除按钮、切换输入按钮
-                NSString *bundle = [[NSBundle mainBundle] pathForResource:@"WJLicensePlateKeyboard.bundle" ofType:nil];
-                NSString *fileName = [NSString stringWithFormat:@"%@/icon_delete",bundle];
-                UIButton *delButton = [self createButtonWithTitle:nil imageName:fileName];
-                delButton.tag = WJFunctionButtonTypeDelete;
-                [delButton addTarget:self action:@selector(functionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-                [delButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-
-                [_keyViews addObject:delButton];
-                [self addSubview:delButton];
-                
-                UIButton *switchButton = [self createButtonWithTitle:@"英文" imageName:nil];
-                [switchButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-                switchButton.tag = WJFunctionButtonTypeSwitch;
-                [_keyViews addObject:switchButton];
-                [self addSubview:switchButton];
-                
-            }else if (index == totalCharacter-1) {
-                
-                UIButton *doneButton = [self createButtonWithTitle:@"完成" imageName:nil];
-                [doneButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-
-                doneButton.tag = WJFunctionButtonTypeFinish;
-                [_keyViews addObject:doneButton];
-                [self addSubview:doneButton];
-            }
-        }
+- (instancetype)initWithCharacters:(NSArray<NSString *> *)characters {
+    _characters = characters;
+    if (self = [super init]) {
     }
     return self;
+}
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupKeyViews];
+    }
+    return self;
+}
+
+- (void)setupKeyViews {
+    NSUInteger totalCharacter = self.characters.count;
+    NSInteger rows = self.rows;
+    NSInteger colunms = self.columns;
+    _keyViews = [NSMutableArray array];
+    NSString *bundle = [[NSBundle mainBundle] pathForResource:@"WJLicensePlateKeyboard.bundle" ofType:nil];
+    for (NSUInteger index = 0; index < totalCharacter; index++) {
+        NSString *character = self.characters[index];
+        WJLicensePlateKeyView *keyView = [[WJLicensePlateKeyView alloc] init];
+        keyView.titleLabel.text = character;
+        [self addSubview:keyView];
+        [_keyViews addObject:keyView];
+        
+        if (index == colunms * (rows-1)-2) { // 删除按钮、切换输入按钮
+            NSString *fileName = [NSString stringWithFormat:@"%@/icon_delete",bundle];
+            UIButton *delButton = [self createButtonWithTitle:nil imageName:fileName];
+            delButton.tag = WJFunctionButtonTypeDelete;
+            [delButton addTarget:self action:@selector(functionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+            [delButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+
+            [_keyViews addObject:delButton];
+            [self addSubview:delButton];
+            
+            UIButton *switchButton = [self createButtonWithTitle:self.switchText imageName:nil];
+            [switchButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+            switchButton.tag = WJFunctionButtonTypeSwitch;
+            [_keyViews addObject:switchButton];
+            [self addSubview:switchButton];
+            
+        }else if (index == totalCharacter-1) {
+            
+            UIButton *doneButton = [self createButtonWithTitle:self.doneText imageName:nil];
+            [doneButton addTarget:self action:@selector(functionButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+            
+            doneButton.tag = WJFunctionButtonTypeFinish;
+            [_keyViews addObject:doneButton];
+            [self addSubview:doneButton];
+        }
+    }
+}
+- (void)setCharacters:(NSArray<NSString *> *)characters {
+    if ([self needResetCharacters:characters]) {
+        _characters = characters;
+        
+        // 移除旧的的
+        for (UIView *view in _keyViews) {
+            [view removeFromSuperview];
+        }
+        [_keyViews removeAllObjects];
+        
+        // 重新创建新的
+        [self setupKeyViews];
+    }
+}
+
+
+- (BOOL)needResetCharacters:(NSArray<NSString *> *)characters {
+    NSInteger count1 = characters.count;
+    NSInteger count2 = _characters.count;
+    if (count1 == 0 || count2 == 0 || (count1 != count2)) {
+        return YES;
+    }
+    
+    BOOL needReset = NO; // 是否需要重置
+    for (int i = 0; i < count1; i++) {
+        if (characters[i] != _characters[i]) { // 内容相同
+            needReset = YES;
+            break;
+        }
+    }
+        
+    return needReset;
 }
 
 - (void)layoutSubviews
@@ -74,7 +113,7 @@
     NSInteger column = self.columns;
     NSInteger rows = self.rows;
 
-    if (column<3 || rows <=3)return;
+    if (column<3 || rows <3)return;
     
     CGFloat viewW = (self.frame.size.width - (column-1)*kKeyViewMarginH)/column;
     CGFloat viewH = (self.frame.size.height - (rows-1)*kKeyViewMarginV)/rows;
@@ -247,6 +286,7 @@
     [button setBackgroundImage:[self imageFromColor:UIColor.lightGrayColor] forState:UIControlStateNormal];
     [button setBackgroundImage:[self imageFromColor:UIColor.whiteColor] forState:UIControlStateHighlighted];
     button.titleLabel.font = [UIFont systemFontOfSize:18];
+    button.titleLabel.adjustsFontSizeToFitWidth = YES;
     button.layer.cornerRadius = kPaopaoAndKeyViewCornerRedius;
     button.layer.masksToBounds = YES;
     return button;
@@ -262,6 +302,13 @@
 - (NSArray <NSString *> *)characters
 {
     return nil;
+}
+
+- (NSString *)doneText {
+    return @"完成";
+}
+- (NSString *)switchText {
+    return @"切换";
 }
 - (NSInteger)rows
 {
