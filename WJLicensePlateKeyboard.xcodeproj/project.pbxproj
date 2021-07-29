@@ -30,6 +30,7 @@
 		5F5F866D26B1DA280022BE5C /* EnglishKeyboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishKeyboardView.m; sourceTree = "<group>"; };
 		A06D009825BFC2C80050ECED /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
 		A06D009925BFC2C80050ECED /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		A0DFB8C626B28070009F420D /* WJKeyBoardHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJKeyBoardHeader.h; sourceTree = "<group>"; };
 		A7BF7FF31E31EA3100677E16 /* WJLicensePlateKeyBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJLicensePlateKeyBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BF800E1E31ECEF00677E16 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BF800F1E31ECEF00677E16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 				A7BF802E1E31EE8700677E16 /* WJLicensePlateKeyView.m */,
 				A7BF802F1E31EE8700677E16 /* WJLicensePlateProvinceView.h */,
 				A7BF80301E31EE8700677E16 /* WJLicensePlateProvinceView.m */,
+				A0DFB8C626B28070009F420D /* WJKeyBoardHeader.h */,
 			);
 			name = WJLicensePlateKeyboard;
 			path = WJLicensePlateKeyBoard;

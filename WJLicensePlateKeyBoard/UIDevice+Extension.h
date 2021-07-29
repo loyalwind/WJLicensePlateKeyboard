@@ -9,7 +9,7 @@
 
 /// NOTE: 以后苹果发布了新机型，需要在 UIDeviceModel.plist 添加进去
 
-@interface UIDevice (Extension)
+@interface UIDevice (WJExtension)
 /** 设备的硬件字符串
  
  *  例如："iPod3,1"、 @"iPad8,8"、 @"iPhone13,1" 等等

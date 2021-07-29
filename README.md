@@ -17,8 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // 方式1
     WJLicensePlateKeyboard *keyBaord = [[WJLicensePlateKeyboard alloc] init];
+    
+    // 方式2 自定义中英文字符集和顺序
+    /*
+    NSArray *chinese = @[@"警",@"宁",@"新",@"琼",@"皖",@"鄂",@"豫",@"陕",@"渝",@"粤",@"桂",@"吉",@"黑",@"鲁",
+                         @"苏",@"冀",@"晋",@"赣",@"沪",@"京",@"津",@"辽",@"浙",@"湘",@"川",
+                         @"云",@"贵",@"蒙",@"闽",@"甘",@"青",@"藏"];
+    NSArray *english = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0",@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"P",
+                         @"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"X",@"B",@"N",@"M"];
+    WJLicensePlateKeyboard *keyBaord = [[WJLicensePlateKeyboard alloc] initWithZhCharacters:chinese enCharacters:english];
+    */
+    
+    // 方式3 自定义键盘
+    /*
+    WJLicensePlateProvinceView *provinceView = [[WJLicensePlateProvinceView alloc] init];
+    // 继承关系：EnglishKeyboardView --> WJLicensePlateEnglishView --> WJLicensePlateKBBaseView
+    EnglishKeyboardView *englishView = [[EnglishKeyboardView alloc] init];
+    WJLicensePlateKeyboard *keyBaord = [[WJLicensePlateKeyboard alloc] initWithChineseView:provinceView englishView:englishView];
+    */
+    
     keyBaord.inputTextView = _inputField2;
     _keyBaord = keyBaord;
 }

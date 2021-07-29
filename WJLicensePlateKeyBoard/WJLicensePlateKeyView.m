@@ -16,6 +16,10 @@
 {
     UIFont *_titleFont;
     UIFont *_paopaoFont;
+    // 文字颜色 （用于适配深色，浅色模式）
+    UIColor *_titleTextColor;
+    // 泡泡背景颜色 （用于适配深色，浅色模式）
+    UIColor *_popBgColor;
 }
 /** titleLabel */
 @property (nonatomic, weak) UILabel *titleLabel;
@@ -39,21 +43,51 @@ IB_DESIGNABLE
     [super awakeFromNib];
     [self setupStyle];
 }
+
 - (void)setupStyle
 {
     self.layer.cornerRadius = kPaopaoAndKeyViewCornerRedius;
     self.layer.masksToBounds = YES;
     self.clipsToBounds = NO;
-    self.backgroundColor = [UIColor whiteColor];
     _paopaoHidden = YES;
+    
+    [self setupColor];
 }
+
+- (void)setupColor {
+    if (@available(iOS 12.0, *)) {
+        switch (self.traitCollection.userInterfaceStyle) {
+            case UIUserInterfaceStyleDark:
+                [self setupDarkModeColor];
+                break;
+            default:
+                [self setupLightModeColor];
+                break;
+        }
+    } else {
+        [self setupLightModeColor];
+    }
+}
+
+- (void)setupLightModeColor {
+    self.backgroundColor = [UIColor whiteColor];
+    _titleLabel.textColor = _titleTextColor = [UIColor blackColor];
+    _popLabel.backgroundColor = _popBgColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+}
+
+- (void)setupDarkModeColor {
+    self.backgroundColor = [UIColor blackColor];
+    _titleLabel.textColor = _titleTextColor = [UIColor whiteColor];
+    _popLabel.backgroundColor = _popBgColor = [UIColor colorWithWhite:0.3 alpha:1.0];
+}
+
 - (UILabel *)titleLabel
 {
     if (!_titleLabel) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.font = self.titleFont;
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.textColor = [UIColor blackColor];
+        titleLabel.textColor = _titleTextColor;
         titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:titleLabel];
         NSDictionary *views = @{@"titleLabel":titleLabel};
@@ -72,7 +106,7 @@ IB_DESIGNABLE
         popLabel.text = self.titleLabel.text;
         popLabel.hidden = YES;
         popLabel.textAlignment = NSTextAlignmentCenter;
-        popLabel.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+        popLabel.backgroundColor = _popBgColor;
         popLabel.layer.cornerRadius = kPaopaoAndKeyViewCornerRedius;
         popLabel.layer.masksToBounds = YES;
         popLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -149,6 +183,15 @@ IB_DESIGNABLE
 {
     self.paopaoHidden = YES;
     [super touchesEnded:touches withEvent:event];
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    
+    if (@available(iOS 12.0, *)) {
+        [self setupColor];
+    } else {
+        [super traitCollectionDidChange:previousTraitCollection];
+    }
 }
 
 @end

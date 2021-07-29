@@ -28,7 +28,7 @@ static CGSize __fringeScreenSizes[] = {
 };
 #endif
 
-@implementation UIDevice (Extension)
+@implementation UIDevice (WJExtension)
 
 + (void)initialize
 {
