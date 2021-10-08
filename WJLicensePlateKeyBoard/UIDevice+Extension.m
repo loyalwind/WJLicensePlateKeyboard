@@ -23,8 +23,8 @@ static NSDictionary <NSString *, id> * __devicesMap = nil;
 static CGSize __fringeScreenSizes[] = {
     {375.f, 812.f},{812.f, 375.f},/// iPhone X, iPhone XS, iPhone 12 Mini,
     {414.f, 896.f},{896.f, 414.f},/// iPhone XR,iPhone XS MAX,iPhone 11, iPhone 11 Pro Max
-    {390.f, 844.f},{844.f, 390.f},/// iPhone 12,iPhone 12 Pro,
-    {428.f, 926.f},{926.f, 428.f},/// iPhone 12 Pro MAX
+    {390.f, 844.f},{844.f, 390.f},/// iPhone 12,iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+    {428.f, 926.f},{926.f, 428.f},/// iPhone 12 Pro MAX, iPhone 13 Pro MAX
 };
 #endif
 

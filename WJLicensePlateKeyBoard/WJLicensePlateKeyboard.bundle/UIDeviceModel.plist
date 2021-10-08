@@ -27,9 +27,9 @@
 		<key>Watch2,7</key>
 		<string>APPLE_WATCH_SERIES_1_42</string>
 		<key>i386</key>
-		<string>i386 Simulator</string>
+		<string>iPhone i386 Simulator</string>
 		<key>x86_64</key>
-		<string>x86_64 Simulator</string>
+		<string>iPhone x64 Simulator</string>
 		<key>iPod1,1</key>
 		<string>iPod Touch 1G</string>
 		<key>iPod2,1</key>
@@ -42,6 +42,8 @@
 		<string>iPod Touch 5G</string>
 		<key>iPod7,1</key>
 		<string>iPod Touch 6G</string>
+		<key>iPod9,1</key>
+		<string>iPod Touch 7G</string>
 		<key>iPad1,1</key>
 		<string>iPad</string>
 		<key>iPad1,2</key>
@@ -162,10 +164,34 @@
 		<string>iPad 8 (WiFi)</string>
 		<key>iPad11,7</key>
 		<string>iPad 8 (WiFi/Cellular)</string>
+		<key>iPad12,1</key>
+		<string>iPad 9 (WiFi)</string>
+		<key>iPad12,2</key>
+		<string>iPad 9 (WiFi/Cellular)</string>
 		<key>iPad13,1</key>
 		<string>iPad Air 4 (WiFi)</string>
 		<key>iPad13,2</key>
 		<string>iPad Air 4 (WiFi/Cellular)</string>
+		<key>iPad13,4</key>
+		<string>iPad Pro 11-inch 3rd-gen (WiFi)</string>
+		<key>iPad13,5</key>
+		<string>iPad Pro 11-inch 3rd-gen (WiFi/Cellular)</string>
+		<key>iPad13,6</key>
+		<string>iPad Pro 11-inch 3rd-gen (WiFi)</string>
+		<key>iPad13,7</key>
+		<string>iPad Pro 11-inch 3rd-gen (WiFi/Cellular)</string>
+		<key>iPad13,8</key>
+		<string>iPad Pro 12.9-inch 5rd-gen (WiFi)</string>
+		<key>iPad13,9</key>
+		<string>iPad Pro 12.9-inch 5rd-gen (WiFi/Cellular)</string>
+		<key>iPad13,10</key>
+		<string>iPad Pro 12.9-inch 5rd-gen (WiFi)</string>
+		<key>iPad13,11</key>
+		<string>iPad Pro 12.9-inch 5rd-gen (WiFi/Cellular)</string>
+		<key>iPad14,1</key>
+		<string>iPad mini 6 (WiFi)</string>
+		<key>iPad14,2</key>
+		<string>iPad mini 6 (WiFi/Cellular)</string>
 		<key>iPhone1,1</key>
 		<string>iPhone 2G</string>
 		<key>iPhone1,2</key>
@@ -246,6 +272,14 @@
 		<string>iPhone 12 Pro</string>
 		<key>iPhone13,4</key>
 		<string>iPhone 12 Pro Max</string>
+		<key>iPhone14,2</key>
+		<string>iPhone 13 Pro</string>
+		<key>iPhone14,3</key>
+		<string>iPhone 13 Pro Max</string>
+		<key>iPhone14,4</key>
+		<string>iPhone 13 mini</string>
+		<key>iPhone14,5</key>
+		<string>iPhone 13</string>
 	</dict>
 	<key>FringeDevices</key>
 	<array>
@@ -262,6 +296,10 @@
 		<string>iPhone13,2</string>
 		<string>iPhone13,3</string>
 		<string>iPhone13,4</string>
+		<string>iPhone14,2</string>
+		<string>iPhone14,3</string>
+		<string>iPhone14,4</string>
+		<string>iPhone14,5</string>
 	</array>
 </dict>
 </plist>
