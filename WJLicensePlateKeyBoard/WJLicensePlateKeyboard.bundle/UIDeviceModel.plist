@@ -181,13 +181,17 @@
 		<key>iPad13,7</key>
 		<string>iPad Pro 11-inch 3rd-gen (WiFi/Cellular)</string>
 		<key>iPad13,8</key>
-		<string>iPad Pro 12.9-inch 5rd-gen (WiFi)</string>
+		<string>iPad Pro 12.9-inch 5th-gen (WiFi)</string>
 		<key>iPad13,9</key>
-		<string>iPad Pro 12.9-inch 5rd-gen (WiFi/Cellular)</string>
+		<string>iPad Pro 12.9-inch 5th-gen (WiFi/Cellular)</string>
 		<key>iPad13,10</key>
-		<string>iPad Pro 12.9-inch 5rd-gen (WiFi)</string>
+		<string>iPad Pro 12.9-inch 5th-gen (WiFi)</string>
 		<key>iPad13,11</key>
-		<string>iPad Pro 12.9-inch 5rd-gen (WiFi/Cellular)</string>
+		<string>iPad Pro 12.9-inch 5th-gen (WiFi/Cellular)</string>
+		<key>iPad13,16</key>
+		<string>iPad Air 5 (WiFi)</string>
+		<key>iPad13,17</key>
+		<string>iPad Air 5 (WiFi/Cellular)</string>
 		<key>iPad14,1</key>
 		<string>iPad mini 6 (WiFi)</string>
 		<key>iPad14,2</key>
@@ -280,6 +284,16 @@
 		<string>iPhone 13 mini</string>
 		<key>iPhone14,5</key>
 		<string>iPhone 13</string>
+		<key>iPhone14,6</key>
+		<string>iPhone SE 3rd-gen</string>
+		<key>iPhone14,7</key>
+		<string>iPhone 14</string>
+		<key>iPhone14,8</key>
+		<string>iPhone 14 Plus</string>
+		<key>iPhone15,2</key>
+		<string>iPhone 14 Pro</string>
+		<key>iPhone15,3</key>
+		<string>iPhone 14 Pro Max</string>
 	</dict>
 	<key>FringeDevices</key>
 	<array>
@@ -300,6 +314,12 @@
 		<string>iPhone14,3</string>
 		<string>iPhone14,4</string>
 		<string>iPhone14,5</string>
+		<string>iPhone14,7</string>
+		<string>iPhone14,8</string>
+		<string>iPhone15,2</string>
+		<string>iPhone15,3</string>
 	</array>
+	<key>version</key>
+	<string>1.0</string>
 </dict>
 </plist>
