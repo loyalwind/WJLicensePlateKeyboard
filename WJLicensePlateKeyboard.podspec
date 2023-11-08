@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   # spec.screenshots  = "https://github.com/loyalwind/WJLicensePlateKeyboard/tree/master/demo/gif/landscape.gif", "https://github.com/loyalwind/WJLicensePlateKeyboard/tree/master/demo/gif/portrait.gif"
   spec.license      = "MIT"
   spec.author       = { "PengWeiJian" => "loyalwind@163.com" }
-  spec.platform     = :ios, "8.0"
+  spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/loyalwind/WJLicensePlateKeyboard.git", :tag => "#{spec.version}" }
   spec.source_files = "WJLicensePlateKeyBoard/**/*.{h,m}"
   spec.resource     = 'WJLicensePlateKeyBoard/WJLicensePlateKeyBoard.bundle'
