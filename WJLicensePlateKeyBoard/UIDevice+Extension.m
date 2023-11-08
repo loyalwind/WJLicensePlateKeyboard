@@ -21,12 +21,12 @@ static NSDictionary <NSString *, id> * __devicesMap = nil;
 
 #if TARGET_IPHONE_SIMULATOR
 static CGSize __fringeScreenSizes[] = {
-    {375.f, 812.f},{812.f, 375.f},/// iPhone X, iPhone XS, iPhone 12 Mini, iPhone 14
+    {375.f, 812.f},{812.f, 375.f},/// iPhone X, iPhone XS, iPhone 12 Mini, iPhone 14, iPhone 15
     {414.f, 896.f},{896.f, 414.f},/// iPhone XR,iPhone XS MAX,iPhone 11, iPhone 11 Pro Max
     {390.f, 844.f},{844.f, 390.f},/// iPhone 12,iPhone 12 Pro, iPhone 13, iPhone 13 Pro
-    {393.f, 852.f},{852.f, 393.f},/// iPhone 14 Pro
-    {428.f, 926.f},{926.f, 428.f},/// iPhone 12 Pro MAX, iPhone 13 Pro MAX, iPhone 14 Plus
-    {430.f, 932.f},{932.f, 430.f},/// iPhone 14 Pro Max
+    {393.f, 852.f},{852.f, 393.f},/// iPhone 14 Pro, iPhone 15 Pro
+    {428.f, 926.f},{926.f, 428.f},/// iPhone 12 Pro MAX, iPhone 13 Pro MAX, iPhone 14 Plus, iPhone 15 Plus
+    {430.f, 932.f},{932.f, 430.f},/// iPhone 14 Pro Max, iPhone 15 Pro Max
 };
 #endif
 
@@ -36,6 +36,18 @@ static CGSize __fringeScreenSizes[] = {
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"WJLicensePlateKeyboard.bundle/UIDeviceModel" ofType:@"plist"];
     __devicesMap = [NSDictionary dictionaryWithContentsOfFile:path];
+}
+
++ (void)setupDeviceModelFile:(NSString *)path {
+    BOOL isDir = NO;
+    if (path.length && [NSFileManager.defaultManager fileExistsAtPath:path isDirectory:&isDir] && !isDir) {
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+        if (dict)  __devicesMap = dict;
+    }
+}
+
++ (void)setupDeviceModelDict:(NSDictionary *)dict {
+    if (dict) __devicesMap = dict;
 }
 
 + (NSString *)platformName
