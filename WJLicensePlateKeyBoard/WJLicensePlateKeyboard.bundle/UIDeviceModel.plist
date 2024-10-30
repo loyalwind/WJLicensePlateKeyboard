@@ -208,6 +208,22 @@
 		<string>iPad Pro 12.9-inch 6th-gen (WiFi)</string>
 		<key>iPad14,6</key>
 		<string>iPad Pro 12.9-inch 6th-gen (WiFi/Cellular)</string>
+		<key>iPad14,8</key>
+		<string>iPad Air M2 11-inch (WiFi)</string>
+		<key>iPad14,9</key>
+		<string>iPad Air M2 11-inch (WiFi/Cellular)</string>
+		<key>iPad14,10</key>
+		<string>iPad Air M2 13-inch (WiFi)</string>
+		<key>iPad14,11</key>
+		<string>iPad Air M2 13-inch (WiFi/Cellular)</string>
+		<key>iPad16,3</key>
+		<string>iPad Pro M4 11-inch (WiFi)</string>
+		<key>iPad16,4</key>
+		<string>iPad Pro M4 11-inch (WiFi/Cellular)</string>
+		<key>iPad16,5</key>
+		<string>iPad Pro M4 13-inch (WiFi)</string>
+		<key>iPad16,6</key>
+		<string>iPad Pro M4 13-inch (WiFi/Cellular)</string>
 		<key>iPhone1,1</key>
 		<string>iPhone 2G</string>
 		<key>iPhone1,2</key>
@@ -314,6 +330,18 @@
 		<string>iPhone 15 Pro</string>
 		<key>iPhone16,2</key>
 		<string>iPhone 15 Pro Max</string>
+		<key>iPhone16,1</key>
+		<string>iPhone 15 Pro</string>
+		<key>iPhone16,2</key>
+		<string>iPhone 15 Pro Max</string>
+		<key>iPhone17,1</key>
+		<string>iPhone 16 Pro</string>
+		<key>iPhone17,2</key>
+		<string>iPhone 16 Pro Max</string>
+		<key>iPhone17,3</key>
+		<string>iPhone 16</string>
+		<key>iPhone17,4</key>
+		<string>iPhone 16 Plus</string>
 	</dict>
 	<key>FringeDevices</key>
 	<array>
@@ -342,8 +370,12 @@
 		<string>iPhone15,5</string>
 		<string>iPhone16,1</string>
 		<string>iPhone16,2</string>
+		<string>iPhone17,1</string>
+		<string>iPhone17,2</string>
+		<string>iPhone17,3</string>
+		<string>iPhone17,4</string>
 	</array>
 	<key>version</key>
-	<string>1.0</string>
+	<string>2.0</string>
 </dict>
 </plist>

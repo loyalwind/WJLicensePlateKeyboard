@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "WJLicensePlateKeyboard"
-  spec.version      = "1.4.0"
+  spec.version      = "1.5.0"
   spec.summary      = "自定义的车牌号码输入键盘，支持横竖屏模式，支持省份简称汉字，英文字母，数字的输入，输入时可以播放音效"
   spec.homepage     = "https://github.com/loyalwind/WJLicensePlateKeyboard"
   # spec.screenshots  = "https://github.com/loyalwind/WJLicensePlateKeyboard/tree/master/demo/gif/landscape.gif", "https://github.com/loyalwind/WJLicensePlateKeyboard/tree/master/demo/gif/portrait.gif"
